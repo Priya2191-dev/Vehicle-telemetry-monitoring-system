@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from src.speed import monitor_speed
+from speed import monitor_speed
 
 app = FastAPI()
 
