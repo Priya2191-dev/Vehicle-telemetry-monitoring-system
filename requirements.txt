@@ -1,0 +1,20 @@
+# Core
+fastapi
+uvicorn
+
+# Data Processing
+numpy
+
+# Visualization
+matplotlib
+
+# Testing
+pytest
+pytest-html
+pytest-cov
+
+# BDD
+behave
+
+# API Testing
+requests
