@@ -18,7 +18,9 @@ This project simulates, validates, analyzes, and visualizes vehicle telemetry da
 ## Installation
 
 git clone https://github.com/Priya2191-dev/Vehicle-telemetry-monitoring-system.git
+
 cd Vehicle-telemetry-monitoring-system
+
 pip install -r requirements.txt
 
 ## Interactive Simulation Demo
