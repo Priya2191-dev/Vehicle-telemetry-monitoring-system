@@ -8,41 +8,40 @@ This project simulates, validates, analyzes, and visualizes vehicle telemetry da
 
 ## Features
 
-* Speed Monitoring
-* Engine Temperature Tracking
-* Brake Pressure Analysis
-* Telemetry Visualization
-* AI-Based Anomaly Detection
-* REST API using FastAPI
-* Automation Testing (Pytest + BDD)
-* CI/CD Integration
-
+- Speed Monitoring
+- Engine Temperature Tracking
+- Brake Pressure Analysis
+- Telemetry Visualization
+- AI-Based Anomaly Detection
+- REST API using FastAPI
+  
 ## Installation
 
-```bash
-git clone https://github.com/your-username/vehicle-telemetry-monitoring.git
-cd vehicle-telemetry-monitoring
+git clone https://github.com/Priya2191-dev/Vehicle-telemetry-monitoring-system.git
+cd Vehicle-telemetry-monitoring-system
 pip install -r requirements.txt
-```
 
-## Demo
+## Interactive Simulation Demo
 
-Open in Google Colab
+Run the vehicle telemetry monitoring system :
+
+[Open in Google Colab] (https://colab.research.google.com/github/Priya2191-dev/Vehicle-telemetry-monitoring-system/blob/main/notebook/Vehicle-telemetry-monitoring-system.ipynb)
+
+## Tests
+
+- Automation Testing (Pytest + BDD)
+- CI/CD Integration
 
 ## Usage
 
 Run tests:
 
-```bash
-pytest
-behave
-```
+- pytest
+- behave
 
 Run API:
 
-```bash
 uvicorn src.api:app --reload
-```
 
 ## CI/CD
 
@@ -50,13 +49,13 @@ GitHub Actions pipeline runs pytest and behave automatically on every push and p
 
 ## Technologies
 
-* FastAPI
-* NumPy
-* Matplotlib
-* Pytest
-* Behave
+- FastAPI
+- NumPy
+- Matplotlib
+- Pytest
+- Behave
 
 ## Author
 
-Priyanka Lale 🚀
+Priyanka Lale 
 
