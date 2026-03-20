@@ -8,14 +8,31 @@ This project simulates, validates, analyzes, and visualizes vehicle telemetry da
 
 ## Features
 
-- Speed Monitoring
-- Engine Temperature Tracking
-- Brake Pressure Analysis
-- Telemetry Visualization
-- AI-Based Anomaly Detection
-- REST API using FastAPI
+- Speed Monitoring:
+
+  It monitors vehicle speed in real time.
   
-## Installation
+- Engine Temperature Tracking:
+
+  Tracks engine temperature to prevent overheating.
+  
+- Brake Pressure Analysis:
+
+  Analyze brake force applied to vehicle.
+  
+- Telemetry Visualization:
+
+  Visualise telemetry data like speed and pressure to understand system behaviour.
+  
+- AI-Based Anomaly Detection:
+
+  Detects abnormal pattern in telemetry data.
+  
+- REST API using FastAPI:
+
+  Exposes telemetry data via REST API, allows integration with external system, supports real time data access, built using light    weight FastAPI framework.
+  
+## Installations
 
 git clone https://github.com/Priya2191-dev/Vehicle-telemetry-monitoring-system.git
 
@@ -29,12 +46,12 @@ Run the vehicle telemetry monitoring system :
 
 [Open in Google Colab] (https://colab.research.google.com/github/Priya2191-dev/Vehicle-telemetry-monitoring-system/blob/main/notebook/Vehicle-telemetry-monitoring-system.ipynb)
 
-## Tests
+## Testing
 
 - Automation Testing (Pytest + BDD)
 - CI/CD Integration
 
-## Usage
+## Usages
 
 Run tests:
 
