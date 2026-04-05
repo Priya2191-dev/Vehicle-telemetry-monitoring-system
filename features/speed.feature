@@ -24,4 +24,4 @@ Feature: Speed Monitoring
  Scenario: Invalid input - non-numeric
     Given speed data "40,fast,60"
     When I monitor speed
-    Then an error should occur
+    Then speed error should occur
