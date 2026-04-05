@@ -7,3 +7,7 @@ Feature: API Testing
   Scenario: Health check
     When I call health API
     Then status should be running
+
+  Scenario: Invalid speed input
+    When I call speed API with invalid data
+    Then an error should occur
