@@ -23,6 +23,3 @@ def then_validate_output(context, expected):
     expected_list = [float(v.strip()) for v in expected.split(",")]
     assert context.result == expected_list, f"Expected {expected_list}, got {context.result}"
 
-@then('an error should occur')
-def then_error(context):
-    assert context.error is not None, "Expected error but none occurred"
