@@ -18,4 +18,4 @@ Feature: Engine Temperature Monitoring
   Scenario: Invalid input
     Given temperature data "80,hot"
     When I evaluate temperature
-    Then an error should occur
+    Then an temperature error should occur
