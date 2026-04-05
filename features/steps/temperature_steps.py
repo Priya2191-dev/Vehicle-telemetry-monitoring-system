@@ -9,7 +9,6 @@ def given_temp(context, values):
     except ValueError:
         context.data = values  # for negative test
 
-
 @when('I evaluate temperature')
 def when_eval(context):
     try:
@@ -19,12 +18,10 @@ def when_eval(context):
         context.result = None
         context.error = str(e)
 
-
 @then('status should be "{expected}"')
 def then_status(context, expected):
     expected_list = [v.strip() for v in expected.split(",")]
     assert context.result == expected_list
-
 
 @then('an error should occur')
 def then_error(context):
