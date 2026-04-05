@@ -1,14 +1,26 @@
 import os
+import pytest
 from telemetry import plot_data
 
+FILE_NAME = "plot.png"
+
+def cleanup():
+    if os.path.exists(FILE_NAME):
+        os.remove(FILE_NAME)
+
 def test_plot_creation():
-    speed = [10, 20, 30]
-    pressure = [5, 10, 15]
+    cleanup()
 
-    # Cleanup before test
-    if os.path.exists("plot.png"):
-        os.remove("plot.png")
+    plot_data([10, 20, 30], [5, 10, 15])
 
-    plot_data(speed, pressure)
+    assert os.path.exists(FILE_NAME)
 
-    assert os.path.exists("plot.png")
+    cleanup()
+
+def test_invalid_input():
+    with pytest.raises(ValueError):
+        plot_data([], [])
+
+def test_length_mismatch():
+    with pytest.raises(ValueError):
+        plot_data([10, 20], [5])
