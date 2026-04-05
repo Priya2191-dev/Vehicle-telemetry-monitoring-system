@@ -14,4 +14,4 @@ Feature: Telemetry Visualization
     Given speed values ""
     And pressure values ""
     When I generate telemetry plot
-    Then telemetry error should occur
+    Then an error should occur
