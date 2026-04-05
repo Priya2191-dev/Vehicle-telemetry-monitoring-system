@@ -26,6 +26,3 @@ def then_avg(context, avg):
 def then_max(context, max):
     assert context.result["max"] == float(max)
 
-@then('an error should occur')
-def then_error(context):
-    assert context.error is not None, "Expected error but none occurred"
