@@ -28,6 +28,6 @@ def when_generate(context):
 def then_validate_plot(context):
     assert os.path.exists(FILE_NAME), "Plot file not created"
 
-@then('an error should occur')
+@then('telemetry error should occur')
 def then_error(context):
     assert context.error is not None
