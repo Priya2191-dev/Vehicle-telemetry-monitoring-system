@@ -2,20 +2,32 @@ from behave import given, when, then
 import os
 from telemetry import plot_data
 
-@given('speed values {values}')
-def step_impl(context, values):
-    context.speed = [int(v) for v in values.split(",")]
+FILE_NAME = "plot.png"
 
-@given('pressure values {values}')
-def step_impl(context, values):
-    context.pressure = [int(v) for v in values.split(",")]
+
+@given('speed values "{values}"')
+def given_speed(context, values):
+    context.speed = [float(v.strip()) for v in values.split(",") if v.strip()] if values else []
+
+@given('pressure values "{values}"')
+def given_pressure(context, values):
+    context.pressure = [float(v.strip()) for v in values.split(",") if v.strip()] if values else []
 
 @when('I generate telemetry plot')
-def step_impl(context):
-    if os.path.exists("plot.png"):
-        os.remove("plot.png")
-    plot_data(context.speed, context.pressure)
+def when_generate(context):
+    try:
+        if os.path.exists(FILE_NAME):
+            os.remove(FILE_NAME)
+
+        plot_data(context.speed, context.pressure)
+        context.error = None
+    except Exception as e:
+        context.error = str(e)
 
 @then('plot file should exist')
-def step_impl(context):
-    assert os.path.exists("plot.png")
+def then_validate_plot(context):
+    assert os.path.exists(FILE_NAME), "Plot file not created"
+
+@then('an error should occur')
+def then_error(context):
+    assert context.error is not None
