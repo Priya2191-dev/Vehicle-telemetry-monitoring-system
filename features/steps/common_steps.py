@@ -2,11 +2,18 @@ from behave import then
 
 @then('an error should occur')
 def then_error(context):
-    assert context.response is not None or context.error is not None
 
-    if hasattr(context, "response") and context.response:
-        assert context.response.status_code in [400, 422]
-    elif hasattr(context, "error") and context.error:
-        assert context.error is not None
+    # Safely check attributes (avoid AttributeError)
+    response = getattr(context, "response", None)
+    error = getattr(context, "error", None)
+
+    # Case 1: API-based error
+    if response is not None:
+        assert response.status_code in [400, 422]
+
+    # Case 2: Logic-based error (non-API features)
+    elif error is not None:
+        assert error is not None
+
     else:
-        raise AssertionError("No error captured")
+        raise AssertionError("No error captured in context")
