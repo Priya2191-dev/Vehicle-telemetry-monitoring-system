@@ -6,17 +6,15 @@ FILE_NAME = "plot.png"
 
 
 @given('speed values "{values}"')
-def step_speed(context, values):
+def given_speed(context, values):
     context.speed = [float(v.strip()) for v in values.split(",") if v.strip()] if values else []
 
-
 @given('pressure values "{values}"')
-def step_pressure(context, values):
+def given_pressure(context, values):
     context.pressure = [float(v.strip()) for v in values.split(",") if v.strip()] if values else []
 
-
 @when('I generate telemetry plot')
-def step_generate(context):
+def when_generate(context):
     try:
         if os.path.exists(FILE_NAME):
             os.remove(FILE_NAME)
@@ -26,7 +24,6 @@ def step_generate(context):
     except Exception as e:
         context.error = str(e)
 
-
 @then('plot file should exist')
-def step_validate_plot(context):
+def then_validate_plot(context):
     assert os.path.exists(FILE_NAME), "Plot file not created"
