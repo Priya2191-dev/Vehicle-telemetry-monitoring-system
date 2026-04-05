@@ -23,6 +23,3 @@ def then_status(context, expected):
     expected_list = [v.strip() for v in expected.split(",")]
     assert context.result == expected_list
 
-@then('an error should occur')
-def then_error(context):
-    assert context.error is not None
