@@ -18,9 +18,9 @@ Feature: Brake Pressure Analysis
   Scenario: Invalid input - negative values
     Given brake pressure data "10,-5"
     When I analyze brake pressure
-    Then an error should be raised
+    Then an error should occur
 
   Scenario: Invalid input - non-numeric
     Given brake pressure data "10,abc"
     When I analyze brake pressure
-    Then an error should be raised
+    Then an error should occur
