@@ -1,6 +1,8 @@
 # 🚗 Vehicle Telemetry Monitoring System
 
-A comprehensive Python-based automation framework for monitoring and testing vehicle telemetry data including speed, temperature, braking, and anomaly detection.
+## Objective
+
+A comprehensive Python-based automation framework for monitoring and testing vehicle telemetry data including speed, temperature, braking, anomaly detection, telemetry visualisation, FastAPI. 
 
 ## Overview
 
@@ -10,15 +12,17 @@ This project simulates, validates, analyzes, and visualizes vehicle telemetry da
 
 - Speed Monitoring:
 
-  It monitors vehicle speed in real time.
-  
-- Engine Temperature Tracking:
+  Calculates average and maximum speed.
 
-  Tracks engine temperature to prevent overheating.
+  Handles invalid inputs.
+  
+- Engine Temperature Monitoring:
+
+  Detects overheating conditions.
   
 - Brake Pressure Analysis:
 
-  Analyze brake force applied to vehicle.
+  Computes braking force logic.
   
 - Telemetry Visualization:
 
@@ -26,11 +30,11 @@ This project simulates, validates, analyzes, and visualizes vehicle telemetry da
   
 - AI-Based Anomaly Detection:
 
-  Detects abnormal pattern in telemetry data.
+  Detects abnormal data using statistical logic.
   
 - REST API using FastAPI:
 
-  Exposes telemetry data via REST API, allows integration with external system, supports real time data access, built using light    weight FastAPI framework.
+  Exposes telemetry data via REST API, allows integration with external system, supports real time  data access, built using light    weight FastAPI framework.
   
 ## Installations
 
@@ -40,39 +44,49 @@ cd Vehicle-telemetry-monitoring-system
 
 pip install -r requirements.txt
 
-## Interactive Simulation Demo
+## Tech Stack
 
-Run the vehicle telemetry monitoring system :
+- Language: Python
+- Testing: Pytest, Behave(BDD)
+- CI/CD: Github Actions
+- Visualisation: Matplotlib
+- Data Analysis: NumPy
+- API Layer: FastAPI
+- Reporting: Allure Reports
 
-[Open in Google Colab] (https://colab.research.google.com/github/Priya2191-dev/Vehicle-telemetry-monitoring-system/blob/main/notebook/Vehicle-telemetry-monitoring-system.ipynb)
+## Testing Strategy
 
-## Testing
+- Unit Testing using Pytest
+- Behavior-Driven Testing using Behave
+- Edge Case Handling
+- Input Validation Testing
+- Negative Scenario Testing
 
-- Automation Testing (Pytest + BDD)
-- CI/CD Integration
+## CI/CD Pipeline
 
-## Usages
+- Runs on every push & pull request.
+- Executes:
 
-Run tests:
+  Pytest(Unit tests)
 
-- pytest
-- behave
+  Behave(BDD tests)
 
-Run API:
+- Generates:
 
-uvicorn src.api:app --reload
+  Allure reports
 
-## CI/CD
+  Coverage reports
 
-GitHub Actions pipeline runs pytest and behave automatically on every push and pull request.
+  Dashboard plots
 
-## Technologies
+## Reports & Outputs
 
-- FastAPI
-- NumPy
-- Matplotlib
-- Pytest
-- Behave
+- Allure Test Reports
+- Behave Execution Logs
+- Coverage Report
+- Dashboard Plot(plot.png)
+
+## Conclusion
 
 ## Author
 
