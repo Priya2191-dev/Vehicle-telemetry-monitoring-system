@@ -1,7 +1,9 @@
 fastapi
 uvicorn
 pytest
+pytest-cov
 behave
 numpy
 matplotlib
 httpx
+allure-pytest
