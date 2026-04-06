@@ -1,10 +1,7 @@
 fastapi
 uvicorn
+pytest
+behave
 numpy
 matplotlib
-pytest
-pytest-html
-pytest-cov
-behave
-requests
 httpx
