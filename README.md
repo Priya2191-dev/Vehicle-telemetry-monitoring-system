@@ -88,6 +88,8 @@ pip install -r requirements.txt
 
 ## Conclusion
 
+Successfully tested Python-based telemetry monitoring and validation framework that simulates real world vehicle data processing, testing, and API exposure using modern automation practices.
+
 ## Author
 
 Priyanka Lale 
