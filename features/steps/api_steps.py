@@ -21,7 +21,12 @@ def when_invalid(context):
 def then_validate_avg(context):
     assert context.response.status_code == 200
     assert "average" in context.response.json()
-    assert "max" in context.response.json()
+
+@then('response should contain max')
+def step_impl(context):
+    assert context.response.status_code == 200
+    data = context.response.json()
+    assert "max" in data
 
 @then('status should be running')
 def then_validate_health(context):
